@@ -41,6 +41,7 @@ public class OurUser {
 
 
 
+
     public void addAccountToUser(List<AccountRequestDTO> accountRequestDTOList) {
         accountlist = new ArrayList<>();
         accountRequestDTOList.forEach(accountDTO -> accountlist.add(Account.builder()
