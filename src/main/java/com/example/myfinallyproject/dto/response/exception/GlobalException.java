@@ -27,4 +27,9 @@ public class GlobalException  {
         return new ResponseEntity<>(userAlreadyExist.getResponseDTO(),HttpStatus.CONFLICT);
     }
 
+    @ExceptionHandler(value = NoSuchUserExistException.class)
+    public ResponseEntity<?>notFoundUser(NoSuchUserExistException noSuchUserExistException){
+        return new ResponseEntity<>(noSuchUserExistException.getResponseDTO(), HttpStatus.NOT_FOUND);
+    }
+
 }
